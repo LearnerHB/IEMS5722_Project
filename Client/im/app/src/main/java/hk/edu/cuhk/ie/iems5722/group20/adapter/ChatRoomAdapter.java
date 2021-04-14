@@ -1,5 +1,6 @@
 package hk.edu.cuhk.ie.iems5722.group20.adapter;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,12 +10,14 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.example.im.R;
 
-import java.util.List;
-
 import hk.edu.cuhk.ie.iems5722.group20.entity.ChatRoom;
+
+import java.util.List;
 
 
 public class ChatRoomAdapter extends ArrayAdapter<ChatRoom> {
@@ -25,7 +28,7 @@ public class ChatRoomAdapter extends ArrayAdapter<ChatRoom> {
 
     public ChatRoomAdapter(AppCompatActivity context, int resource, List<ChatRoom> objects) {
         super(context, resource, objects);
-        objects.add(0, null);
+        objects.add(0,null);
         mActivity = context;
         resourceId = resource;
     }
