@@ -1,0 +1,152 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="hk.edu.cuhk.ie.iems5722.group20.activity.MainActivity" >
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:elevation="2dp"
+        android:outlineProvider="bounds"
+        tools:targetApi="lollipop">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp">
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:paddingLeft="10dp"
+
+                android:text="IM"
+                android:textColor="#151515"
+                android:textSize="20dp"/>
+
+            <ImageView
+                android:id="@+id/im_search"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="end|center_vertical"
+                android:layout_margin="4dp"
+                android:contentDescription="@string/app_name"
+
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_search"
+                android:tint="#222222" />
+
+        </FrameLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/main_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+
+        />
+
+
+
+    <RadioGroup
+        android:id="@+id/tab_menu"
+        android:layout_height="52dp"
+
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:background="#EAE7E7"
+        android:elevation="4dp"
+        android:outlineProvider="bounds"
+        android:translationZ="8dp"
+        tools:targetApi="lollipop"
+        >
+
+        <RadioButton
+            android:id="@+id/rbChat"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:button="@null"
+
+            android:checked="true"
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="0dp"
+            android:drawableTop="@drawable/liaotian"
+
+            android:text="微信"
+            android:textSize="12dp"
+            android:textColor="#272626"
+            android:drawableTint="#878585"
+            />
+
+
+        <RadioButton
+            android:id="@+id/rbContact"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="0dp"
+            android:drawableTop="@drawable/txl"
+            android:text="联系人"
+            android:textSize="12dp"
+            android:textColor="#272626"
+            android:drawableTint="#878585"
+            />
+
+
+
+        <RadioButton
+            android:id="@+id/rbFind"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/faxian"
+            android:button="@null"
+            android:gravity="center_horizontal|bottom"
+            android:textSize="12dp"
+            android:textColor="#272626"
+            android:drawableTint="#878585"
+
+            android:text="发现"
+            />
+
+        <RadioButton
+            android:id="@+id/rbMe"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+
+            android:button="@null"
+            android:drawableTop="@drawable/me"
+
+
+
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="2dp"
+            android:text="我"
+            android:textSize="12dp"
+            android:textColor="#272626"
+            android:drawableTint="#878585"
+            />
+    </RadioGroup>
+</LinearLayout>
