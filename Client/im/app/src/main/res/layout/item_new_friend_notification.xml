@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/listview_new_friend"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="3dp"
+    android:paddingBottom="4dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/person"
+        android:id="@+id/new_friend_portrait"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/new_friend_portrait"
+        android:id="@+id/new_friend_name"
+        android:paddingLeft="20dp"
+        android:layout_centerVertical="true"
+        android:text="新联系人"
+        android:textSize="16dp"
+        android:textColor="#171717"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/refuse"
+
+        android:id="@+id/accept"
+        android:text="接受"
+        android:textSize="16dp"
+        android:textColor="#171717"
+        android:background="@drawable/bg_btn1"/>
+
+        <Button
+        android:layout_gravity="end"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:id="@+id/refuse"
+        android:text="拒绝"
+        android:textSize="16dp"
+        android:textColor="#171717"
+        android:background="@drawable/bg_btn1"
+
+        />
+
+
+
+</RelativeLayout>

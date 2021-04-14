@@ -46,6 +46,10 @@
 
     <style name="AppTheme.Account" parent="AppTheme.TransStatusBar" />
 
+    <style name="AppTheme.Message" parent="AppTheme.TransStatusBar">
+        <item name="android:windowBackground">@color/windowsBackgroundLight</item>
+    </style>
+
     <style name="AppTheme.Group.Create" parent="AppTheme.TransStatusBar">
         <item name="colorPrimary">@color/colorAccent</item>
         <item name="colorPrimaryDark">@color/colorAccent</item>
