@@ -91,6 +91,25 @@ def add_friend():
     conn.close()
 
 
+# 获得添加列表
+@app.route("/api/project/get_friend_request", methods=["GET"])
+def get_friend_request():
+    user_id = request.args.get("user_id")
+    conn = mysql.connector.connect(host="localhost",
+                                   port=3306,
+                                   user="dbuser", password="dbuser666", database="project")  # dbuser password
+    cursor = conn.cursor(dictionary=True)
+    query = "select nickname FROM waiting_list,user where receive_user_id=" + str(user_id) +" and status=0 and request_user_id=user_id"
+    print(query)
+    cursor.execute(query)
+    request_users = cursor.fetchall()
+
+    conn.close()
+    print(request_users)
+    return jsonify(status="ok", data=request_users)  # 已经添加了
+
+
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
