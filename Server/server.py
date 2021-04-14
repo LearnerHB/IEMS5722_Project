@@ -109,6 +109,24 @@ def get_friend_request():
     return jsonify(status="ok", data=request_users)  # 已经添加了
 
 
+# 获得联系人列表
+@app.route("/api/project/get_friends", methods=["GET"])
+def get_friends():
+    user_id = request.args.get("user_id")
+    conn = mysql.connector.connect(host="localhost",
+                                   port=3306,
+                                   user="dbuser", password="dbuser666", database="project")  # dbuser password
+    cursor = conn.cursor(dictionary=True)
+    query = "select nickname FROM relationship,user where user_id1=" + str(user_id) +" and user_id=user_id2"
+    print(query)
+    cursor.execute(query)
+    all_friends = cursor.fetchall()
+
+    conn.close()
+    print(all_friends)
+    return jsonify(status="ok", data=all_friends)  # 已经添加了
+
+
 
 
 if __name__ == "__main__":
