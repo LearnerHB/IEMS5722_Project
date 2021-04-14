@@ -19,19 +19,19 @@ IEMS5722 Mobile Network Project
 ### 2. User Login
 
 
-### 3. Add Friends via User ID (Accpet or Refuse)
+### 3. Contact: Add Friends via User ID (Accept or Refuse)
 
 
-### 4. Personal Chat with Friends
+### 4. Chat: Personal Chat with Friends
 
 
-### 5. Public ChatRoom Chat
+### 5. Chat: Public ChatRoom Chat
 
 
-### 6. Post Moments
+### 6. Find: Post Moments
 
 
-### 7. Friends click “like” 
+### 7. Find: Friends click “like” 
 
 
 ## Database Design
