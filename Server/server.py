@@ -128,6 +128,102 @@ def get_friends():
 
 
 
+# 添加好友操作（接受或拒绝 接受1 拒绝0）
+@app.route("/api/project/accpet_or_refuse", methods=["GET"])
+def accpet_or_refuse():
+    operation = request.args.get("operation")
+    request_name = request.args.get("request_name")
+    receive_id = request.args.get("receive_id")
+    print(request_name)
+    print(receive_id)
+
+    conn = mysql.connector.connect(host="localhost",
+                                   port=3306,
+                                   user="dbuser", password="dbuser666", database="project")  # dbuser password
+    cursor = conn.cursor(dictionary=True)
+
+    # 先找出该用户名对应的id
+    query = "SELECT user_id FROM user WHERE nickname =" + request_name
+    print(query)
+    cursor.execute(query)
+    result = cursor.fetchone()
+    request_id = result['user_id']
+    print(request_id)
+
+    # waiting_list 删除该记录
+    query = "delete FROM waiting_list WHERE receive_user_id=" + str(receive_id) +\
+            " and request_user_id="+str(request_id)
+    cursor.execute(query)
+    conn.commit()
+
+
+    if(operation == '1'):
+        print("接受")
+        query = "INSERT INTO relationship values("+str(request_id)+","+str(receive_id)+")"
+        cursor.execute(query)
+        query = "INSERT INTO relationship values(" + str(receive_id) + "," + str(request_id) + ")"
+        cursor.execute(query)
+        conn.commit()
+
+    else:
+        print("拒绝")
+
+    # query = "select nickname FROM relationship,user where user_id1=" + str(user_id) +" and user_id=user_id2"
+    # print(query)
+    # cursor.execute(query)
+    # all_friends = cursor.fetchall()
+
+    conn.close()
+
+    return jsonify(status="ok")  # 已经添加了
+
+# 发朋友圈
+@app.route("/api/project/posts", methods=["POST"])
+def new_posts():
+    user_id = request.form.get("user_id")
+    posts_content = request.form.get("posts_content")
+
+    # 点赞数 默认为0
+    # 评论数 默认为0
+
+    conn = mysql.connector.connect(host="localhost",
+                                   port=3306,
+                                   user="dbuser", password="dbuser666", database="project")  # dbuser password
+    cursor = conn.cursor(dictionary=True)
+
+    query = 'INSERT INTO circle_posts (user_id,post_content) values('+user_id+",'"+posts_content+"')"
+    print(query)
+
+    cursor.execute(query)
+    conn.commit()
+    conn.close()
+    return jsonify(status="ok")  # 发送朋友圈成功
+
+
+# 获取朋友圈列表
+@app.route("/api/project/posts", methods=["GET"])
+def get_posts():
+    user_id = request.args.get("user_id")
+    # 点赞数 默认为0
+    # 评论数 默认为0
+    conn = mysql.connector.connect(host="localhost",
+                                   port=3306,
+                                   user="dbuser", password="dbuser666", database="project")  # dbuser password
+    cursor = conn.cursor(dictionary=True)
+
+    query = "SELECT m.*,n.is_like FROM(" \
+            "SELECT circle_posts.*,nickname FROM circle_posts,user WHERE circle_posts.user_id IN (" \
+            "select DISTINCT(user_id2) AS user_id FROM relationship where " \
+            "user_id1 = "+user_id+" OR user_id2="+user_id+") AND circle_posts.user_id = user.user_id) as m " \
+            "left join (SELECT * FROM likes_info WHERE user_id="+user_id+") AS n ON m.post_id=n.post_id ORDER BY post_time DESC"
+    print(query)
+    cursor.execute(query)
+    result = cursor.fetchall()
+    print(result)
+    conn.close()
+    return jsonify(status="ok", data=result)  # 发送朋友圈成功
+
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
