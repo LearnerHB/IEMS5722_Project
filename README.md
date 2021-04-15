@@ -3,11 +3,11 @@ IEMS5722 Mobile Network Project
 
 ## Group Members
 
-|    Member    | Student ID |
-| :----------: | :--------: |
-|   HU Bing    | 1155151103 |
-| CHEN Jiaxian | 1155152636 |
-|  SUN Suwei   |            |
+|    Member    | Student ID |  Commit_Author.name  |
+| :----------: | :--------: | :------------------: |
+|   HU Bing    | 1155151103 |       LearnerHB      |
+| CHEN Jiaxian | 1155152636 |   CHENNNJX & 橙夹馅   |
+|  SUN Suwei   | 1155152413 |         ssw          |
 
 
 
