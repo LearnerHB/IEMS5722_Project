@@ -17,6 +17,11 @@
         android:theme="@style/AppTheme">
 
         <activity
+            android:name="hk.edu.cuhk.ie.iems5722.group14.activity.ChatActivity"
+            android:label="@string/title_activity_chat"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
             android:name="hk.edu.cuhk.ie.iems5722.group14.activity.LoginActivity"
             android:theme="@style/LoginAppTheme">
             <intent-filter>
