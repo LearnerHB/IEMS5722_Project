@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="hk.edu.cuhk.ie.iems5722.group14.activity.MainActivity" >
+    tools:context="hk.edu.cuhk.ie.iems5722.group20.activity.MainActivity" >
 
 
     <com.google.android.material.appbar.AppBarLayout
