@@ -40,7 +40,7 @@ public class CircleActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         userInfo = (UserInfo) getApplicationContext();
-
+        // git test
         // 获取朋友圈信息
         String url = "http://18.191.232.230/api/project/posts?user_id="+userInfo.getId();
         HttpGetTask getFriendsRequest = new HttpGetTask();
