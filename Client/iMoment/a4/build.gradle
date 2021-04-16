@@ -1,0 +1,53 @@
+//plugins {
+//    id 'com.android.application'
+//}
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+//        applicationId "hk.edu.cuhk.ie.iems5722.a2_1155152636"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+def retrofit_version = "2.3.0"
+dependencies {
+    implementation ('io.socket:socket.io-client:2.0.0') {exclude group: 'org.json', module: 'json'}
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.navigation:navigation-fragment:2.3.3'
+    implementation 'androidx.navigation:navigation-ui:2.3.3'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    //okhttp3网络请求框架
+    implementation 'com.squareup.okhttp3:okhttp:3.9.0'
+    implementation "com.squareup.retrofit2:retrofit:${retrofit_version}"
+    //ConverterFactory的Gson依赖包
+    implementation "com.squareup.retrofit2:converter-gson:${retrofit_version}"
+    //ConverterFactory的String依赖包
+    implementation "com.squareup.retrofit2:converter-scalars:${retrofit_version}"
+    //eventbus
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    //json 解析
+    implementation 'com.google.code.gson:gson:2.8.2'
+}

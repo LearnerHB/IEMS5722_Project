@@ -5,6 +5,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <FrameLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:background="#999"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
     <ListView
         android:id="@+id/chatroom_listview"
         android:layout_width="match_parent"

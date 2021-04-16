@@ -2,20 +2,16 @@ package hk.edu.cuhk.ie.iems5722.group14.activity;
 
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
-
+import android.view.View;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import com.example.im.R;
-
+import hk.edu.cuhk.ie.iems5722.group14.adapter.MyPagerAdapter;
 import java.util.ArrayList;
 import java.util.List;
-
-import hk.edu.cuhk.ie.iems5722.group14.adapter.MyPagerAdapter;
 
 public class MainActivity extends AppCompatActivity{
 

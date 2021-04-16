@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".activity.ModuleChatActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/Theme.A2_1155152636.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/back"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:popupTheme="@style/Theme.A2_1155152636.PopupOverlay"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <hk.edu.cuhk.ie.iems5722.a2_1155152636.view.PhilListView
+            android:id="@+id/phlistview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:divider="#0000"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <EditText
+                android:id="@+id/input_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Typing..."
+                android:maxLines="2"
+                android:textColorHighlight="#77673AB7"
+                android:textColorLink="#81673AB7"/>
+
+        <Button
+                android:id="@+id/send"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#836E7FDC"
+                android:fontFamily="sans-serif-black"
+                android:text="Send"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+

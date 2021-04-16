@@ -1,2 +1,2 @@
-include ':app'
+include ':app' , ':a4'
 rootProject.name='iMoment'

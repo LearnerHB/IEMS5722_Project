@@ -26,6 +26,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
+import hk.edu.cuhk.ie.iems5722.a2_1155152636.activity.MainFragment;
 import hk.edu.cuhk.ie.iems5722.group14.activity.ChatActivity;
 import hk.edu.cuhk.ie.iems5722.group14.asynctask.AddFriendRequest;
 import hk.edu.cuhk.ie.iems5722.group14.asynctask.HttpGetTask;
@@ -81,6 +82,14 @@ public class MyPagerAdapter extends PagerAdapter {
         // init circles
         switch (position) {
             case 0:
+                FragmentManager fm = mActivity.getSupportFragmentManager();
+                Fragment fragment = fm.findFragmentById(R.id.layout);
+                if (fragment == null) {
+                    fragment = MainFragment.newInstance();
+                    fm.beginTransaction()
+                            .add(R.id.layout, fragment)
+                            .commit();
+                }
                 View view_0 = lsViews.get(0);
                 final ChatRoomAdapter chatRoomAdapter = new ChatRoomAdapter(mActivity, R.layout.chatroom_list, chatRoomList);
                 ListView listView = view_0.findViewById(R.id.chatroom_listview);
@@ -131,7 +140,7 @@ public class MyPagerAdapter extends PagerAdapter {
                 init_contact(view_contact);
 
                 break;
-            case 2: // TODO : find
+            case 2: // TODO : friend
                 break;
             case 3: // TODO ： me
                 break;

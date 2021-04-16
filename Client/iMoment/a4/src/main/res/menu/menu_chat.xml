@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+            android:icon="@mipmap/shuaxin"
+            app:showAsAction="always"
+            android:id="@+id/add_item"
+            android:title="刷新"/>
+<!--    <item-->
+<!--        android:id="@+id/remove_item"-->
+<!--        android:title="Remove"/>-->
+<!--    <item-->
+<!--        android:id="@+id/back_item"-->
+<!--        android:title="Back"/>-->
+</menu>
