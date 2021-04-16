@@ -1,16 +1,158 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:id="@+id/page_me"
+    android:background="#CDCBCB">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:background="#F8F3F3"
 
+        >
+        <ImageView
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id="@+id/protrait"
+            android:src="@drawable/default_portrait"
+
+
+            />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:layout_weight="5">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nickname"
+                android:text="MyNickName"
+                android:layout_centerVertical="true"
+                android:paddingLeft="16dp"
+                android:textSize="20dp"
+                android:textColor="#111111"
+                android:paddingTop="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/chatnumber"
+                android:text="MyNickName"
+                android:paddingTop="5dp"
+                android:paddingLeft="20dp"
+                android:textSize="15dp"
+                android:textColor="#111111"
+
+                />
+
+        </LinearLayout>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/paizhao"
+            android:layout_marginTop="15dp"
+            android:id="@+id/paizhao"
+
+            ></ImageView>
+
+
+
+    </LinearLayout>
     <TextView
-        android:text="me"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_width="match_parent"
+        android:layout_height="12px"></TextView>
+    <LinearLayout
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="#D6D2D2"
+        android:paddingBottom="40dp"
+        >
+
+        <Button
+            android:id="@+id/qianming"
+            android:layout_width="match_parent"
+            android:layout_height="140px"
+            android:background="#F8F3F3"
+            android:text="个性签名"
+            android:textSize="16dp"
+            android:drawableRight="@drawable/to1"
+            android:drawableTint="#857F7F"
+            >
+
+
+
+        </Button>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="12px"></TextView>
+        <Button
+            android:id="@+id/tupian"
+            android:layout_width="match_parent"
+            android:layout_height="140px"
+            android:background="#F8F3F3"
+            android:drawableRight="@drawable/to1"
+            android:drawableTint="#857F7F"
+            android:text="我的二维码"
+            android:textSize="16dp">
+
+        </Button>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="12px"></TextView>
+        <Button
+            android:id="@+id/phonenumber"
+            android:layout_width="match_parent"
+            android:layout_height="140px"
+            android:background="#F8F3F3"
+            android:drawableRight="@drawable/to1"
+            android:drawableTint="#857F7F"
+            android:text="电话"
+            android:textSize="16dp">
+
+        </Button>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="12px"></TextView>
+        <Button
+            android:id="@+id/myaddress"
+            android:layout_width="match_parent"
+            android:layout_height="140px"
+            android:background="#F8F3F3"
+            android:drawableRight="@drawable/to1"
+            android:drawableTint="#857F7F"
+            android:text="我的地址"
+            android:textSize="16dp">
+
+        </Button>
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/padding"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:background="#D6D2D2">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="注销"
+            android:id="@+id/logout"
+            android:textSize="20dp"
+            android:layout_centerInParent="true"
+            android:background="#F2F4EF"
+            />
+    </RelativeLayout>
+</LinearLayout>

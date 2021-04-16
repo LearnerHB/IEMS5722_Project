@@ -1,16 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:id="@+id/page_find"
+    android:background="#EDE9E9">
 
-    <TextView
-        android:text="friend"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/friends"
+        android:text="朋友圈"
+        android:textColor="#434242"
+        android:textSize="17dp"
+        android:drawableLeft="@drawable/pyq"
+        android:drawableRight="@drawable/to2"
+
+
+
+        />
+
+    <Button
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pyq1"
+        android:textSize="17dp"
+        android:drawableLeft="@drawable/sys"
+        android:drawableRight="@drawable/to2"
+        android:text="扫一扫"
+        />
+
+
+
+
+
+</LinearLayout>

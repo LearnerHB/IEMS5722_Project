@@ -7,9 +7,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -28,6 +31,8 @@ import java.util.concurrent.ExecutionException;
 
 import hk.edu.cuhk.ie.iems5722.a2_1155152636.activity.MainFragment;
 import hk.edu.cuhk.ie.iems5722.group14.activity.ChatActivity;
+import hk.edu.cuhk.ie.iems5722.group14.activity.CircleActivity;
+import hk.edu.cuhk.ie.iems5722.group14.activity.LoginActivity;
 import hk.edu.cuhk.ie.iems5722.group14.asynctask.AddFriendRequest;
 import hk.edu.cuhk.ie.iems5722.group14.asynctask.HttpGetTask;
 import hk.edu.cuhk.ie.iems5722.group14.entity.ChatRoom;
@@ -134,16 +139,49 @@ public class MyPagerAdapter extends PagerAdapter {
                         mActivity.startActivity(i);
                     }
                 });
-            case 1: //  contact
+
+
+            case 1:
 
                 View view_contact = lsViews.get(1);
                 init_contact(view_contact);
 
+
                 break;
-            case 2: // TODO : friend
+            //
+            case 2:
+                View view = lsViews.get(2);
+
+                Button button = view.findViewById(R.id.friends);
+                button.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent i = new Intent(mActivity, CircleActivity.class);
+                        mActivity.startActivity(i);
+                    }
+                });
                 break;
-            case 3: // TODO ： me
-                break;
+            case 3:
+                View view1 = lsViews.get(3);
+                TextView userName = view1.findViewById(R.id.nickname);
+                ImageView portrait = view1.findViewById(R.id.protrait);
+                portrait.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(mActivity, "修改头像", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                userInfo = (UserInfo) mActivity.getApplicationContext();
+                userName.setText(userInfo.getNickName());
+                Button logout = view1.findViewById(R.id.logout);
+                logout.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent i = new Intent(mActivity, LoginActivity.class);
+                        mActivity.startActivity(i);
+                    }
+                });
+
             default:
                 break;
 

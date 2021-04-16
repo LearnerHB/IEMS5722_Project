@@ -10,6 +10,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import com.example.im.R;
 import hk.edu.cuhk.ie.iems5722.group14.adapter.MyPagerAdapter;
+import hk.edu.cuhk.ie.iems5722.group14.entity.Circle;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity{
     private ViewPager viewPager;
     private List<View> lsViews = new ArrayList<>();
     private MyPagerAdapter pagerAdapter;
+    private ArrayList<Circle> circleMessageList = new ArrayList<>();
 
 
     //底部三个按钮

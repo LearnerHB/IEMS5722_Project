@@ -15,6 +15,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name="hk.edu.cuhk.ie.iems5722.group14.activity.CircleActivity"
+            android:label="@string/title_activity_circle"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
 
         <activity
             android:name="hk.edu.cuhk.ie.iems5722.group14.activity.ChatActivity"

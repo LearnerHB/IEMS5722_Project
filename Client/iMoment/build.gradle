@@ -37,4 +37,5 @@ ext {
 
     geniusVersion = '2.0.0'
     glideVersion = '3.7.0'
+    circleimageviewVersion = '2.1.0'
 }

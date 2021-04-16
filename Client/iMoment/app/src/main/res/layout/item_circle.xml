@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/listview_circle"
+    android:paddingRight="10dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:id="@+id/listview_circle2">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:src="@drawable/default_portrait"
+            android:id="@+id/protrait_circle"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="8"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:paddingTop="9dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/nickname_circle"
+                android:textSize="21dp"
+                android:textColor="#2F3F95"
+                android:text="good"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="balabalabala"
+                android:id="@+id/content_circle"
+                android:textSize="19dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="3dp"
+                android:paddingRight="10dp"
+                android:textColor="#121A1E"
+                />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/flag"
+                android:paddingLeft="40dp">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_zanblack"
+                    android:id="@+id/dislike_flag"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="10dp"/>
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_zanred"
+                    android:id="@+id/like_flag"
+                    android:paddingLeft="20dp"
+                    android:visibility="gone"
+                    android:paddingRight="10dp"/>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/flag"
+                android:id="@+id/like_num"
+                android:paddingLeft="10dp"
+                android:textSize="70px"
+                android:layout_centerVertical="true"
+                android:text="0"/>
+
+
+        </RelativeLayout>
+
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="评论"
+            android:textSize="17dp"
+            android:drawableLeft="@drawable/ic_comment"
+            android:paddingLeft="20dp"
+            android:paddingEnd="20dp"
+            android:background="@drawable/bg_btn2"
+
+            />
+
+    </LinearLayout>
+
+<!--    以下为隐藏的控件。用于存储数据-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/post_id"
+        android:visibility="gone"/>
+
+</LinearLayout>
