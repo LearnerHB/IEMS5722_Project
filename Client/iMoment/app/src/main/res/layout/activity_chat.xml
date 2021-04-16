@@ -72,22 +72,21 @@
             android:layout_width="300dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:hint="input"
+            android:hint="Typing..."
             android:textSize="25dp"
             android:paddingLeft="10dp"
             android:background="@drawable/bg_editext1"
             android:text=""/>
 
-        <ImageView
-            android:id="@+id/imageView"
-
-            android:layout_width="40dp"
-            android:layout_height="match_parent"
+        <Button
+            android:id="@+id/send"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
             android:layout_toLeftOf="@+id/textView"
-            android:layout_weight="1"
-            android:background="@drawable/send"
+            android:backgroundTint="#836E7FDC"
+            android:fontFamily="sans-serif-black"
+            android:text="Send"/>
 
-             />
 
     </LinearLayout>
 

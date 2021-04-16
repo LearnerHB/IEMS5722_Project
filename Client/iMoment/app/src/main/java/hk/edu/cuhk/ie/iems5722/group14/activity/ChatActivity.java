@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AbsListView;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -133,7 +134,7 @@ public class ChatActivity extends AppCompatActivity {
         });
 
         //send Message
-        ImageView imageView = findViewById(R.id.imageView);
+        Button imageView = findViewById(R.id.send);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
