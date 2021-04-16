@@ -7,7 +7,7 @@ IEMS5722 Mobile Network Project
 | :----------: | :--------: | :------------------: |
 |   HU Bing    | 1155151103 |       LearnerHB      |
 | CHEN Jiaxian | 1155152636 |   CHENNNJX & 橙夹馅   |
-|  SUN Suwei   | 1155152413 |         ssw          |
+|  SUN Suwei   | 1155152413 |       Eillotsun      |
 
 
 
