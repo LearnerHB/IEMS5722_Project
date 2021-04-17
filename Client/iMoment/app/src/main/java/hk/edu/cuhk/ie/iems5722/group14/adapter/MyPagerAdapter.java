@@ -116,7 +116,7 @@ public class MyPagerAdapter extends PagerAdapter {
                             chatRoomList.add(chatRoom);
                         }
                     } else {
-                        System.out.println("错误");
+                        System.out.println("Error");
                     }
 
                 } catch (ExecutionException e) {
@@ -168,7 +168,7 @@ public class MyPagerAdapter extends PagerAdapter {
                 portrait.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Toast.makeText(mActivity, "修改头像", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(mActivity, "Modify photo", Toast.LENGTH_SHORT).show();
                     }
                 });
                 userInfo = (UserInfo) mActivity.getApplicationContext();
@@ -209,12 +209,12 @@ public class MyPagerAdapter extends PagerAdapter {
             public void onClick(View v) {
                 final EditText added_user = new EditText(mActivity);
                 AlertDialog.Builder builder = new AlertDialog.Builder(mActivity);
-                builder.setTitle("输入要添加的好友昵称").setIcon(android.R.drawable.ic_dialog_info).setView(added_user)
+                builder.setTitle("Enter the nickname").setIcon(android.R.drawable.ic_dialog_info).setView(added_user)
                         .setNegativeButton("Cancel", null);
                 builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int which) {
-                        String resultMessage = "请求失败";
+                        String resultMessage = "Request failed";
 
                         String receive_user = added_user.getText().toString();
                         if (!"".equals(receive_user)) {
@@ -254,7 +254,7 @@ public class MyPagerAdapter extends PagerAdapter {
                 }
 
             } else {
-                System.out.println("获取数据错误");
+                System.out.println("Get data error");
             }
 
         } catch (ExecutionException e) {
@@ -284,7 +284,7 @@ public class MyPagerAdapter extends PagerAdapter {
                 }
 
             } else {
-                System.out.println("获取数据错误");
+                System.out.println("Get data error");
             }
 
         } catch (ExecutionException e) {
@@ -319,13 +319,13 @@ public class MyPagerAdapter extends PagerAdapter {
             String status = jsonObject.getString("status");
             switch (status) {
                 case "0":
-                    result = "没有该用户";
+                    result = "No such user";
                     break;
                 case "1":
-                    result = "已发送请求";
+                    result = "Request sent";
                     break;
                 case "2":
-                    result = "TA已是您的好友";
+                    result = "Already your friend";
                     break;
                 default:
                     break;

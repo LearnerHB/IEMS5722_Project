@@ -110,7 +110,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="评论"
+            android:text="Comment"
             android:textSize="17dp"
             android:drawableLeft="@drawable/ic_comment"
             android:paddingLeft="20dp"

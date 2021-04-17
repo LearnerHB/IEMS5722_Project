@@ -23,7 +23,7 @@
         android:id="@+id/new_friend_name"
         android:paddingLeft="20dp"
         android:layout_centerVertical="true"
-        android:text="新联系人"
+        android:text="New contact"
         android:textSize="16dp"
         android:textColor="#171717"
         />
@@ -35,7 +35,7 @@
         android:layout_toLeftOf="@+id/refuse"
 
         android:id="@+id/accept"
-        android:text="接受"
+        android:text="Accept"
         android:textSize="16dp"
         android:textColor="#171717"
         android:background="@drawable/bg_btn1"/>
@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:id="@+id/refuse"
-        android:text="拒绝"
+        android:text="Refuse"
         android:textSize="16dp"
         android:textColor="#171717"
         android:background="@drawable/bg_btn1"

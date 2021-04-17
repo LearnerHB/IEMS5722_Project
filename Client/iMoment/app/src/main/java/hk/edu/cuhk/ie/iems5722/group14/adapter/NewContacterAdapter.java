@@ -69,10 +69,10 @@ public class NewContacterAdapter extends ArrayAdapter<NewContacter> {
             String status = jsonObject.getString("status");
             if("ok".equals(status)){
 
-                System.out.println("操作成功");
+                System.out.println("Success");
 
             }else {
-                System.out.println("操作失败");
+                System.out.println("Failure");
             }
         } catch (ExecutionException e) {
             e.printStackTrace();

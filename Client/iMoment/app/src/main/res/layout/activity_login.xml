@@ -137,7 +137,7 @@
                 android:id="@+id/checkBox1"
                 android:layout_width="106dp"
                 android:layout_height="wrap_content"
-                android:text="显示密码"
+                android:text="Show"
                 android:textColor="#FAF8F8"
                 android:textSize="15dp"
                 android:textStyle="bold"

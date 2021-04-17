@@ -35,7 +35,7 @@
                     android:paddingLeft="5dp"
                     android:paddingTop="5dp"
 
-                    android:text="朋友圈"
+                    android:text="Moment"
                     android:textColor="#151515"
                     android:textSize="18dp"/>
 

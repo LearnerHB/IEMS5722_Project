@@ -49,7 +49,7 @@ public class LikesPostRequest extends AsyncTask<String, Void, String> {
             int responseCode = conn.getResponseCode();
             if (responseCode == HttpURLConnection.HTTP_OK) {
                 // Process the response
-                System.out.println("http请求成功");
+                System.out.println("http request succeeded");
                 is = conn.getInputStream();
                 // Convert the InputStream into a string
                 String line;

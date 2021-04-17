@@ -99,7 +99,7 @@ public class CircleAdapter extends ArrayAdapter<Circle> {
             JSONObject jsonObject = new JSONObject(s);
             String status = jsonObject.getString("status");
             if (!"ok".equals(status)){
-                result = "网络错误，请稍后再试";
+                result = "Network error, try again";
             }
 
 

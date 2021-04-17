@@ -65,7 +65,7 @@ public class CircleActivity extends AppCompatActivity {
                 }
 
             }else {
-                System.out.println("获取数据错误");
+                System.out.println("Get data error");
             }
 
         } catch (ExecutionException e) {
@@ -83,13 +83,13 @@ public class CircleActivity extends AppCompatActivity {
             public void onClick(View v) {
                 final EditText post_content = new EditText(CircleActivity.this);
                 AlertDialog.Builder builder = new AlertDialog.Builder(CircleActivity.this);
-                builder.setTitle("内容").setIcon(android.R.drawable.ic_dialog_info).setView(post_content)
+                builder.setTitle("Content").setIcon(android.R.drawable.ic_dialog_info).setView(post_content)
                         .setNegativeButton("Cancel", null);
                 builder.setPositiveButton("POST", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
-                        String resultMessage = "请求失败";
+                        String resultMessage = "Request failed";
 
                         String postContent = post_content.getText().toString();
                         if(!"".equals(postContent)){
@@ -128,7 +128,7 @@ public class CircleActivity extends AppCompatActivity {
             JSONObject jsonObject = new JSONObject(s);
             String status = jsonObject.getString("status");
             if (!"ok".equals(status)){
-                result = "网络错误，请稍后再试";
+                result = "Network error, please try again later";
             }
 
 

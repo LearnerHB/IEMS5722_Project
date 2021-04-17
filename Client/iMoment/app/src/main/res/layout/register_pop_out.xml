@@ -14,7 +14,7 @@
             android:layout_centerVertical="true"
             android:paddingLeft="20dp"
 
-            android:text="用户名" />
+            android:text="Username" />
 
         <EditText
             android:layout_width="100dp"
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:paddingLeft="20dp"
             android:layout_below="@+id/username"
-            android:text="密码" />
+            android:text="Password" />
 
         <EditText
             android:layout_width="100dp"

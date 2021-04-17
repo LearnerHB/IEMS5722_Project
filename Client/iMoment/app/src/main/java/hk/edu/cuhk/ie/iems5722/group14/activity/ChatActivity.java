@@ -35,7 +35,7 @@ public class ChatActivity extends AppCompatActivity {
 
     static LinkedList<Message> messageList = new LinkedList<>();
 
-    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 
     static int pageNum =1;
     static int totalPage;
@@ -85,7 +85,7 @@ public class ChatActivity extends AppCompatActivity {
                     case SCROLL_STATE_IDLE:
                         if(view.getLastVisiblePosition()==view.getCount()-1){
                         }else if(pageNum<totalPage && view.getFirstVisiblePosition()==0){
-                            System.out.println("加载数据");
+                            System.out.println("Loading...");
                             pageNum = pageNum+1;
                             int position = messageList.size()-1;
                             updateList(target_user_id,pageNum);
@@ -119,7 +119,7 @@ public class ChatActivity extends AppCompatActivity {
         refreshButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("点击");
+                System.out.println("Click");
 
                 messageList.clear();
                 //
@@ -127,7 +127,7 @@ public class ChatActivity extends AppCompatActivity {
 
                 updateList(target_user_id,pageNum);
                 messageAdapter.notifyDataSetChanged();
-                System.out.println("data has been updated..");
+                System.out.println("Data has been updated..");
                 // I want to change the focus after data updated, but it does not work, always go to the newest item.
                 listView.setSelection(0);
             }
@@ -213,7 +213,7 @@ public class ChatActivity extends AppCompatActivity {
                 }
 
             }else {
-                System.out.println("获取数据错误");
+                System.out.println("Get data error");
             }
 
         } catch (ExecutionException e) {

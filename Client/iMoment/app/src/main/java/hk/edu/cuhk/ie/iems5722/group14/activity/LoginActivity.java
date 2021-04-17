@@ -87,9 +87,9 @@ public class LoginActivity extends AppCompatActivity {
                     userInfo.setId(Integer.valueOf(userId));
                     usernameEd.setText("");
                     passwordEd.setText("");
-                    Toast.makeText(LoginActivity.this,"登入成功",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this,"login successful",Toast.LENGTH_SHORT).show();
                 }else{
-                    Toast.makeText(LoginActivity.this,"账号或密码错误",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this,"Incorrect username or password",Toast.LENGTH_SHORT).show();
                     // password error
                 }
             }
@@ -102,7 +102,7 @@ public class LoginActivity extends AppCompatActivity {
                 final EditText password = new EditText(LoginActivity.this);
                 final View dialogView = View.inflate(LoginActivity.this, R.layout.register_pop_out, null);
                 AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
-                builder.setTitle("注册").setIcon(android.R.drawable.ic_dialog_info)
+                builder.setTitle("Login").setIcon(android.R.drawable.ic_dialog_info)
                         .setView(dialogView)
                         .setNegativeButton("Cancel", null);
                 builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
@@ -120,9 +120,9 @@ public class LoginActivity extends AppCompatActivity {
                                 String URLString = "http://18.191.232.230/api/project/register";
                                 resultMessage = userRegister(URLString,username,password);
                                 if("ok".equals(resultMessage)){
-                                    Toast.makeText(LoginActivity.this,"注册成功",Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(LoginActivity.this,"Register successful",Toast.LENGTH_SHORT).show();
                                 }else {
-                                    Toast.makeText(LoginActivity.this,"服务器出现了点问题，请稍后再试",Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(LoginActivity.this,"Server failure, try again",Toast.LENGTH_SHORT).show();
                                 }
 
                             }catch (Exception e){
@@ -130,7 +130,7 @@ public class LoginActivity extends AppCompatActivity {
                             }
 
                         }else{
-                            Toast.makeText(LoginActivity.this,"请确认输入的账号及密码",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this,"Confirm the account and password",Toast.LENGTH_SHORT).show();
                         }
 
                     }
