@@ -11,7 +11,7 @@
 
 ## Features Realized
 
-(The screenshots of each features in the [ScreenShots](https://github.com/LearnerHB/IEMS5722_Project/ScreenShots) dictionary.)
+(The screenshots of each features in the [ScreenShots](https://github.com/LearnerHB/IEMS5722_Project/tree/main/ScreenShots) dictionary.)
 
 ### 1. User Register & Login
 
