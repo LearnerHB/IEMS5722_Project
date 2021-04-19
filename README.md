@@ -11,26 +11,18 @@
 
 ## Features Realized
 
+(The screenshots of each features in the [ScreenShots](https://github.com/LearnerHB/IEMS5722_Project/ScreenShots) dictionary.)
+
 ### 1. User Register & Login
 
-![image-20210419213624182](https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-04-19-133624.png)
-
 ### 2. Contact: Add Friends via User ID
-
-![image-20210419213615152](https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-04-19-133615.png)
 
 
 ### 3. Chat: Private Chat & Chatroom
 
-![image-20210419213559692](https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-04-19-133600.png)
-
 ### 4. Moments
 
-![image-20210419213540836](https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-04-19-133541.png)
-
 ### 5. Comments & Scan QR Code (TODO)
-
-![image-20210419213514136](https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-04-19-133514.png)
 
 
 
