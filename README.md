@@ -13,24 +13,24 @@
 
 ### 1. User Register & Login
 
-![image-20210419102531676](https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-04-19-112156.png)
+<img src="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-04-19-112156.png" alt="image-20210419102531676" style="zoom:50%;" />
 
 ### 2. Contact: Add Friends via User ID
 
-![image-20210419102604658](https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-04-19-112202.png)
+<img src="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-04-19-112202.png" alt="image-20210419102604658" style="zoom:50%;" />
 
 
 ### 3. Chat: Private Chat & Chatroom
 
-![image-20210419102728600](https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-04-19-112207.png)
+<img src="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-04-19-112207.png" alt="image-20210419102728600" style="zoom:50%;" />
 
 ### 4. Moments
 
-![image-20210419132155984](https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-04-19-112213.png)
+<img src="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-04-19-112213.png" alt="image-20210419132155984" style="zoom:50%;" />
 
 ### 5. Comments & Scan QR Code (TODO)
 
-![image-20210419103729609](https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-04-19-112218.png)
+<img src="https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-04-19-112218.png" alt="image-20210419103729609" style="zoom:50%;" />
 
 
 
