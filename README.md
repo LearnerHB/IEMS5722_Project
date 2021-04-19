@@ -1,6 +1,4 @@
 # IEMS5722_Project
-[toc]
-
 ## Group Members
 
 |    Member    | Student ID |  Commit_Author.name  |
