@@ -11,25 +11,26 @@
 
 ## Features Realized
 
-### 1. User Register
+### 1. User Register & Login
+
+![image-20210419102531676](/Users/bing/Library/Application Support/typora-user-images/image-20210419102531676.png)
+
+### 2. Contact: Add Friends via User ID
+
+![image-20210419102604658](/Users/bing/Library/Application Support/typora-user-images/image-20210419102604658.png)
 
 
+### 3. Chat: Private Chat & Chatroom
 
+![image-20210419102728600](/Users/bing/Library/Application Support/typora-user-images/image-20210419102728600.png)
 
-### 2. User Login
+### 4. Moments
 
+![image-20210419103144643](/Users/bing/Library/Application Support/typora-user-images/image-20210419103144643.png)
 
-### 3. Contact: Add Friends via User ID (Accept or Refuse)
+### 5. Comments & Scan QR Code (TODO)
 
-
-### 4. Chat: Private Chat  Friends
-
-
-### 5. Chat: Public Chatroom
-
-### 6. Posts/Moments(朋友圈): Like(点赞)
-
-
+![image-20210419103729609](/Users/bing/Library/Application Support/typora-user-images/image-20210419103729609.png)
 
 
 
