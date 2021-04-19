@@ -13,24 +13,24 @@
 
 ### 1. User Register & Login
 
-![image-20210419102531676](/Users/bing/Library/Application Support/typora-user-images/image-20210419102531676.png)
+![image-20210419102531676](https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-04-19-111315.png)
 
 ### 2. Contact: Add Friends via User ID
 
-![image-20210419102604658](/Users/bing/Library/Application Support/typora-user-images/image-20210419102604658.png)
+![image-20210419102604658](https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-04-19-111324.png)
 
 
 ### 3. Chat: Private Chat & Chatroom
 
-![image-20210419102728600](/Users/bing/Library/Application Support/typora-user-images/image-20210419102728600.png)
+![image-20210419102728600](https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-04-19-111404.png)
 
 ### 4. Moments
 
-![image-20210419103144643](/Users/bing/Library/Application Support/typora-user-images/image-20210419103144643.png)
+![image-20210419132155984](https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-04-19-111412.png)
 
 ### 5. Comments & Scan QR Code (TODO)
 
-![image-20210419103729609](/Users/bing/Library/Application Support/typora-user-images/image-20210419103729609.png)
+![image-20210419103729609](https://tencent-hb666-1253906972.cos.ap-chengdu.myqcloud.com/photo/2021-04-19-111552.png)
 
 
 
@@ -279,7 +279,7 @@ username=test&password=1234
 
 Post the following to the API:
 
-/api/project/messages?curr_user=34&target_user=23
+/api/project/messages?curr_user=34&target_user=23&message=hi
 
 **Sample Output**
 
