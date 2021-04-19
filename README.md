@@ -37,7 +37,7 @@
 
 ## Database Design
 
-### 1. user
+### user
 
 |          | Type        | Constraint          |
 | -------- | ----------- | ------------------- |
@@ -49,7 +49,7 @@ PRIMARY KEY (user_id)
 
 
 
-### 2. waiting_list
+### waiting_list
 
 |                 | Type | Constraint  |
 | --------------- | ---- | ----------- |
@@ -61,7 +61,7 @@ PRIMARY KEY (request_user_id, receive_user_id)
 
 
 
-### 3. relationship
+### relationship
 
 |           | Type | Constraint  |
 | --------- | ---- | ----------- |
@@ -72,7 +72,7 @@ PRIMARY KEY (user_id_1, user_id_2)
 
 
 
-### 4. posts
+### posts
 
 |              | Type         | Constraint                 |
 | ------------ | ------------ | -------------------------- |
@@ -86,7 +86,7 @@ PRIMARY KEY (post_id)
 
 
 
-### 5. likes_info
+### likes_info
 
 |         | Type       | Constraint  |
 | ------- | ---------- | ----------- |
@@ -98,7 +98,7 @@ PRIMARY KEY (post_id, user_id)
 
 
 
-### 6. messages
+### messages
 
 |              | Type         | Constraint                |
 | ------------ | ------------ | ------------------------- |
@@ -112,7 +112,7 @@ PRIMARY KEY (message_id, send_user, receive_user)
 
 
 
-### 7. post_comments (todo)
+### post_comments (todo)
 
 |                 | Type         | Constraint                |
 | --------------- | ------------ | ------------------------- |
@@ -269,10 +269,11 @@ username=test&password=1234
 
 **Input  Parameters**
 
-| Paramter Name | Required | Type | Description                                 |
-| :------------ | :------- | :--- | ------------------------------------------- |
-| send_user     | Yes      | int  | current logined user id, the message sender |
-| receive_user  | Yes      | int  | certain user id, the message receiver       |
+| Paramter Name | Required | Type   | Description                                 |
+| :------------ | :------- | :----- | ------------------------------------------- |
+| send_user     | Yes      | int    | current logined user id, the message sender |
+| receive_user  | Yes      | int    | certain user id, the message receiver       |
+| message       | Yes      | string | message sent by the send_user               |
 
 **Example**
 
@@ -284,22 +285,6 @@ Post the following to the API:
 
 ```json
 {
-    "data": [
-        {
-            "message": "test",
-            "message_id": 10,
-            "message_time": "2021-04-15 07:10",
-            "receive_user": 34,
-            "send_user": 23
-        },
-        {
-            "message": "TT",
-            "message_id": 8,
-            "message_time": "2021-04-15 06:54",
-            "receive_user": 23,
-            "send_user": 34
-        }
-    ],
     "status": "ok"
 }
 ```
