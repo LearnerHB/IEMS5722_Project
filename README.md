@@ -24,11 +24,11 @@
 
 
 
-## [Database Design]
+## Database Design
 
 See [Here](https://github.com/LearnerHB/IEMS5722_Project/tree/main/DatabaseDesign).
 
-## [API Reference]
+## API Reference
 
 See [Here](https://github.com/LearnerHB/IEMS5722_Project/tree/main/API_Reference).
 
