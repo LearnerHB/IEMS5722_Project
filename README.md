@@ -15,10 +15,10 @@
 
 1. User Register & Login
 
-2. Contact: Add Friends via User ID
+2. Contact: Add Friends via User ID (Accept or Refuse)
 
-3. Chat: Private Chat & Chatroom
-4. Moments
+3. Chat: Private Chat & Pubilc Chatroom
+4. Moments(Post Moments & Click "like")
 5. Comments & Scan QR Code (TODO)
 
 
