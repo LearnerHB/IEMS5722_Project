@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/friends"
-        android:text="朋友圈"
+        android:text="Moments"
         android:textColor="#434242"
         android:textSize="17dp"
         android:drawableLeft="@drawable/pyq"
@@ -31,7 +31,7 @@
         android:textSize="17dp"
         android:drawableLeft="@drawable/sys"
         android:drawableRight="@drawable/to2"
-        android:text="扫一扫"
+        android:text="Scan"
         />
 
 

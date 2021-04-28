@@ -82,7 +82,7 @@
             android:layout_width="match_parent"
             android:layout_height="140px"
             android:background="#F8F3F3"
-            android:text="个性签名"
+            android:text="Signature"
             android:textSize="16dp"
             android:drawableRight="@drawable/to1"
             android:drawableTint="#857F7F"
@@ -101,7 +101,7 @@
             android:background="#F8F3F3"
             android:drawableRight="@drawable/to1"
             android:drawableTint="#857F7F"
-            android:text="我的二维码"
+            android:text="QR Code"
             android:textSize="16dp">
 
         </Button>
@@ -115,7 +115,7 @@
             android:background="#F8F3F3"
             android:drawableRight="@drawable/to1"
             android:drawableTint="#857F7F"
-            android:text="电话"
+            android:text="Telephone"
             android:textSize="16dp">
 
         </Button>
@@ -129,7 +129,7 @@
             android:background="#F8F3F3"
             android:drawableRight="@drawable/to1"
             android:drawableTint="#857F7F"
-            android:text="我的地址"
+            android:text="Address"
             android:textSize="16dp">
 
         </Button>
@@ -145,14 +145,14 @@
         android:orientation="horizontal"
         android:layout_gravity="bottom"
         android:background="#D6D2D2">
+
         <Button
+            android:id="@+id/logout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="注销"
-            android:id="@+id/logout"
-            android:textSize="20dp"
             android:layout_centerInParent="true"
             android:background="#F2F4EF"
-            />
+            android:text="Sign Out"
+            android:textSize="14sp" />
     </RelativeLayout>
 </LinearLayout>
