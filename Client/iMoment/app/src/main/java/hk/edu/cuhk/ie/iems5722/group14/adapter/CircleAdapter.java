@@ -64,7 +64,7 @@ public class CircleAdapter extends ArrayAdapter<Circle> {
             @Override
             public void onClick(View v) {
 
-                String URLString = "http://18.191.232.230/api/project/like";
+                String URLString = "http://18.222.103.240/api/project/like";
                 postRequest(URLString, String.valueOf(postId.getText()));
                 //
                 dislike_flag.setVisibility(View.GONE);
@@ -77,7 +77,7 @@ public class CircleAdapter extends ArrayAdapter<Circle> {
         like_flag.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String URLString = "http://18.191.232.230/api/project/dislike";
+                String URLString = "http://18.222.103.240/api/project/dislike";
                 postRequest(URLString, String.valueOf(postId.getText()));
                 like_flag.setVisibility(View.GONE);
                 dislike_flag.setVisibility(View.VISIBLE);

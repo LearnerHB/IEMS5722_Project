@@ -44,7 +44,7 @@ public class NewContacterAdapter extends ArrayAdapter<NewContacter> {
             @Override
             public void onClick(View v) {
                 //
-                String url = "http://18.191.232.230/api/project/accpet_or_refuse?operation="+1+
+                String url = "http://18.222.103.240/api/project/accept_or_refuse?operation="+1+
                         "&request_name='"+nickName.getText()+"'&receive_id="+userInfo.getId();
                 responseToRequest(url,nickName);
             }
@@ -52,7 +52,7 @@ public class NewContacterAdapter extends ArrayAdapter<NewContacter> {
         refuse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "http://18.191.232.230/api/project/accpet_or_refuse?operation="+0+
+                String url = "http://18.222.103.240/api/project/accept_or_refuse?operation="+0+
                         "&request_name='"+nickName.getText()+"'&receive_id="+userInfo.getId();
                 responseToRequest(url,nickName);
             }

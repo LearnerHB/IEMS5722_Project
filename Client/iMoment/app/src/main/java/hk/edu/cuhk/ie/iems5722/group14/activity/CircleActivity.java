@@ -42,7 +42,7 @@ public class CircleActivity extends AppCompatActivity {
         userInfo = (UserInfo) getApplicationContext();
         // git test
         // 获取朋友圈信息
-        String url = "http://18.191.232.230/api/project/posts?user_id="+userInfo.getId();
+        String url = "http://18.222.103.240/api/project/posts?user_id="+userInfo.getId();
         HttpGetTask getFriendsRequest = new HttpGetTask();
 
         try {
@@ -118,7 +118,7 @@ public class CircleActivity extends AppCompatActivity {
     }
 
     private String postRequest(String postContent){
-        String URLString = "http://18.191.232.230/api/project/posts";
+        String URLString = "http://18.222.103.240/api/project/posts";
         String[] parameters = new String[]{URLString,String.valueOf(userInfo.getId()),postContent};
         String result="";
 

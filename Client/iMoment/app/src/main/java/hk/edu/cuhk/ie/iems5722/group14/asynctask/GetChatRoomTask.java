@@ -19,7 +19,7 @@ public class GetChatRoomTask extends AsyncTask<URL, Void, String> {
         StringBuffer resultData = new StringBuffer();
 
         try{
-            URL url = new URL("http://18.191.232.230/api/project/rooms");
+            URL url = new URL("http://18.222.103.240/api/project/rooms");
 
             conn = (HttpURLConnection) url.openConnection();
 

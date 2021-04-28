@@ -146,7 +146,7 @@ public class ChatActivity extends AppCompatActivity {
                 String send_user = String.valueOf(userInfo.getId());
                 String receive_user = target_user_id;
 
-                String URLString = "http://18.191.232.230/api/project/messages";
+                String URLString = "http://18.222.103.240/api/project/messages";
                 String[] parameters = new String[]{URLString,send_user,receive_user,message};
 
                 if (!("".equals(message))){
@@ -184,7 +184,7 @@ public class ChatActivity extends AppCompatActivity {
     private void updateList(String chatRoomId, int pageNum){
 
         // 获取数据
-        String url = "http://18.191.232.230/api/project/messages?curr_user="+userInfo.getId()+"&target_user="+target_user_id;
+        String url = "http://18.222.103.240/api/project/messages?curr_user="+userInfo.getId()+"&target_user="+target_user_id;
 
         HttpGetTask getChatRoomMessageTask = new HttpGetTask();
 

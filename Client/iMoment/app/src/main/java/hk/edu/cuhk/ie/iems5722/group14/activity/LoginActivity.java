@@ -67,7 +67,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String username = String.valueOf(usernameEd.getText());
                 String password = String.valueOf(passwordEd.getText());
-                String URLString = "http://18.191.232.230/api/project/login";
+                String URLString = "http://18.222.103.240/api/project/login";
                 JSONObject resultMessage = userLogin(URLString,username,password);
                 String status = "";
                 String userId = "";
@@ -117,7 +117,7 @@ public class LoginActivity extends AppCompatActivity {
 
                         if(!"".equals(username) && !"".equals(password)){
                             try {
-                                String URLString = "http://18.191.232.230/api/project/register";
+                                String URLString = "http://18.222.103.240/api/project/register";
                                 resultMessage = userRegister(URLString,username,password);
                                 if("ok".equals(resultMessage)){
                                     Toast.makeText(LoginActivity.this,"Register successful",Toast.LENGTH_SHORT).show();

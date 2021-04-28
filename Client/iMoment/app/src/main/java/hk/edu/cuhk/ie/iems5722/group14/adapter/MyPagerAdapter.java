@@ -99,7 +99,7 @@ public class MyPagerAdapter extends PagerAdapter {
                 final ChatRoomAdapter chatRoomAdapter = new ChatRoomAdapter(mActivity, R.layout.chatroom_list, chatRoomList);
                 ListView listView = view_0.findViewById(R.id.chatroom_listview);
                 listView.setAdapter(chatRoomAdapter);
-                String url = "http://18.191.232.230/api/project/rooms?user_id=" + userInfo.getId();
+                String url = "http://18.222.103.240/api/project/rooms?user_id=" + userInfo.getId();
                 HttpGetTask httpGetTask = new HttpGetTask();
                 try {
                     String s = httpGetTask.execute(url).get();
@@ -237,7 +237,7 @@ public class MyPagerAdapter extends PagerAdapter {
         // 好友请求列表
         userInfo = (UserInfo) mActivity.getApplicationContext();
 
-        String url = "http://18.191.232.230/api/project/get_friend_request?user_id=" + userInfo.getId();
+        String url = "http://18.222.103.240/api/project/get_friend_request?user_id=" + userInfo.getId();
         HttpGetTask getFriendsRequest = new HttpGetTask();
 
         try {
@@ -268,7 +268,7 @@ public class MyPagerAdapter extends PagerAdapter {
 
         // 初始化联系人列表
 
-        url = "http://18.191.232.230/api/project/get_friends?user_id=" + userInfo.getId();
+        url = "http://18.222.103.240/api/project/get_friends?user_id=" + userInfo.getId();
         HttpGetTask getFriends = new HttpGetTask();
         try {
             String s = getFriends.execute(url).get();
@@ -309,7 +309,7 @@ public class MyPagerAdapter extends PagerAdapter {
 //    }
 
     private String sendFriendRequest(String receive_nickname) {
-        String URLString = "http://18.191.232.230/api/project/add_friend";
+        String URLString = "http://18.222.103.240/api/project/add_friend";
         String[] parameters = new String[]{URLString, String.valueOf(userInfo.getId()), receive_nickname};
         String result = "";
         AddFriendRequest newFriend = new AddFriendRequest();
