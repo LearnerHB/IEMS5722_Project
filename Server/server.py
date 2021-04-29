@@ -103,20 +103,21 @@ def get_friends():
     return jsonify(status="ok", data=all_friends)  # 已经添加了
 
 
-# 添加好友操作（接受或拒绝 接受1 拒绝0）
-@app.route("/api/project/accpet_or_refuse", methods=["GET"])
+# 添加好友操作（接受或拒绝 接受1 拒绝0）    CHECK
+@app.route("/api/project/accept_or_refuse", methods=["GET"])
 def accpet_or_refuse():
     print("-----ACTION: accept_or_refuse-----")
     operation = request.args.get("operation")
     request_name = request.args.get("request_name")
     receive_id = request.args.get("receive_id")
+    
     print("operation: ", operation)
     print("request name: ", request_name)
     print("receive id: ", receive_id)
 
     mydb = MyDatabase()
     # 先找出该用户名对应的id
-    query = "SELECT user_id FROM user WHERE nickname =" + request_name
+    query = "SELECT user_id FROM user WHERE nickname=" + request_name
     mydb.cursor.execute(query)
     result = mydb.cursor.fetchone()
     print("QUERY: ", query)
@@ -127,6 +128,10 @@ def accpet_or_refuse():
     # waiting_list 删除该记录
     query = "delete FROM waiting_list WHERE receive_user_id=" + str(receive_id) +\
             " and request_user_id="+str(request_id)
+    print("QUERY: ", query)
+    mydb.cursor.execute(query)
+    query = "delete FROM waiting_list WHERE receive_user_id=" + str(request_id) +\
+            " and request_user_id="+str(receive_id)
     print("QUERY: ", query)
     mydb.cursor.execute(query)
     mydb.conn.commit()
