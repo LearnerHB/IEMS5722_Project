@@ -127,33 +127,33 @@ public class CircleActivity extends AppCompatActivity {
         listView.setOnScrollListener(new AbsListView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(AbsListView view, int scrollState) {
-//                switch (scrollState) {
-//                    case SCROLL_STATE_IDLE:
-//                        boolean toBottom = view.getLastVisiblePosition() == view.getCount() - 1;
-//                        if (toBottom) {
-//                            refresh();
-//                            circleAdapter.notifyDataSetChanged();
-//
-//                        }
-//                        break;
-//                }
+                switch (scrollState) {
+                    case SCROLL_STATE_IDLE:
+                        boolean toBottom = view.getFirstVisiblePosition() == 0;
+                        if (toBottom) {
+                            refresh();
+                            circleAdapter.notifyDataSetChanged();
+
+                        }
+                        break;
+                }
             }
             @Override
             public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
-                if (firstVisibleItem == 0) {
-                    View firstVisibleItemView = listView.getChildAt(0);
-                    if (firstVisibleItemView != null && firstVisibleItemView.getTop() == 0) {
-                        refresh();
-                        circleAdapter.notifyDataSetChanged();
-
-                        Log.e("ListView", "##### 滚动到顶部 #####");
-                    }
-                } else if ((firstVisibleItem + visibleItemCount) == totalItemCount) {
-                    View lastVisibleItemView = listView.getChildAt(listView.getChildCount() - 1);
-                    if (lastVisibleItemView != null && lastVisibleItemView.getBottom() == listView.getHeight()) {
-                        Log.e("ListView", "##### 滚动到底部 ######");
-                    }
-                }
+//                if (firstVisibleItem == 0) {
+//                    View firstVisibleItemView = listView.getChildAt(0);
+//                    if (firstVisibleItemView != null && firstVisibleItemView.getTop() == 0) {
+//                        refresh();
+//                        circleAdapter.notifyDataSetChanged();
+//
+//                        Log.e("ListView", "##### 滚动到顶部 #####");
+//                    }
+//                } else if ((firstVisibleItem + visibleItemCount) == totalItemCount) {
+//                    View lastVisibleItemView = listView.getChildAt(listView.getChildCount() - 1);
+//                    if (lastVisibleItemView != null && lastVisibleItemView.getBottom() == listView.getHeight()) {
+//                        Log.e("ListView", "##### 滚动到底部 ######");
+//                    }
+//                }
             }
         });
 
