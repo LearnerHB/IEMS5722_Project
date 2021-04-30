@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.scankitdemo"
+    android:targetSandboxVersion="2"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="28" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:testOnly="true" >
+        <activity android:name="com.example.scankitdemo.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="huawei_module_scankit_local"
+            android:value="10103300" />
+        <meta-data
+            android:name="huawei_module_scankit_sdk_version"
+            android:value="scan:1.2.2.300" />
+        <meta-data
+            android:name="com.huawei.hms.client.service.name:scan"
+            android:value="scan:1.2.2.300" />
+        <meta-data
+            android:name="com.huawei.hms.min_api_level:scan:huawei_module_scankit"
+            android:value="1" />
+        <meta-data
+            android:name="com.huawei.hms.min_api_level:scan:hmscore"
+            android:value="1" />
+
+        <activity android:name="com.huawei.hms.hmsscankit.ScanKitActivity" />
+
+        <meta-data
+            android:name="com.huawei.hms.client.service.name:ml-computer-camera-inner"
+            android:value="ml-computer-camera-inner:2.0.1.300" />
+        <meta-data
+            android:name="com.huawei.hms.client.service.name:ml-computer-ha-inner"
+            android:value="ml-computer-ha-inner:2.0.1.300" />
+        <meta-data
+            android:name="com.huawei.hms.client.service.name:dynamic-api"
+            android:value="dynamic-api:1.0.13.303" />
+        <meta-data
+            android:name="com.huawei.hms.min_api_level:dynamic-api:huawei_module_dynamicloader"
+            android:value="2" />
+
+        <provider
+            android:name="com.huawei.hms.mlsdk.common.provider.MLInitializerProvider"
+            android:authorities="com.example.scankitdemo.MLInitializerProvider"
+            android:exported="false" />
+        <provider
+            android:name="com.huawei.agconnect.core.provider.AGConnectInitializeProvider"
+            android:authorities="com.example.scankitdemo.AGCInitializeProvider"
+            android:exported="false" />
+
+        <service
+            android:name="com.huawei.agconnect.core.ServiceDiscovery"
+            android:exported="false" />
+    </application>
+
+</manifest>

@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/marco/Downloads/2term/IEMS 5722/ScanKit/DefaultView-java/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-b+sr+Latn/values-b+sr+Latn.xml",
+            "map": [
+                {
+                    "source": "/Users/marco/.gradle/caches/transforms-2/files-2.1/61024ddb46b361ee49b3045a68608e72/scan-1.2.2.300/res/values-b+sr+Latn/values-b+sr+Latn.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,106,173,237,306,373,428,487",
+                        "endColumns": "50,66,63,68,66,54,58,52",
+                        "endOffsets": "101,168,232,301,368,423,482,535"
+                    }
+                }
+            ]
+        }
+    ]
+}
