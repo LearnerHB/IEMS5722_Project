@@ -102,7 +102,7 @@ public class LoginActivity extends AppCompatActivity {
                 final EditText password = new EditText(LoginActivity.this);
                 final View dialogView = View.inflate(LoginActivity.this, R.layout.register_pop_out, null);
                 AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
-                builder.setTitle("Login").setIcon(android.R.drawable.ic_dialog_info)
+                builder.setTitle("Register").setIcon(android.R.drawable.ic_dialog_info)
                         .setView(dialogView)
                         .setNegativeButton("Cancel", null);
                 builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
